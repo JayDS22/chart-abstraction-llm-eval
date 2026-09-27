@@ -47,9 +47,11 @@ def chat(system: str, user: str, temperature: float = 0.0) -> str:
 
 
 def _anthropic(system: str, user: str, temperature: float) -> str:
-    from anthropic import Anthropic, APIError
+    from anthropic import Anthropic
 
     client = Anthropic(api_key=ANTHROPIC_KEY)
+    # Wrap broadly so any client-side type validation or API error surfaces with the actual message
+    # (Streamlit hides raw TypeError text; this converts it to RuntimeError with a visible message).
     try:
         r = client.messages.create(
             model=ANTHROPIC_MODEL,
@@ -58,14 +60,15 @@ def _anthropic(system: str, user: str, temperature: float) -> str:
             system=system,
             messages=[{"role": "user", "content": user}],
         )
-    except APIError as e:
+    except Exception as e:
+        # Surface the actual error type + message so Streamlit doesn't redact it as a bare TypeError
         raise RuntimeError(
-            f"Anthropic API error for model '{ANTHROPIC_MODEL}': {e}. "
-            f"If the model slug is wrong, try one of the currently-live IDs: "
-            f"'claude-sonnet-4-5-20250929' (default, recommended), "
-            f"'claude-opus-4-1-20250805' (highest quality, higher cost), "
-            f"'claude-haiku-4-5-20251001' (fastest, cheapest). "
-            f"Set ANTHROPIC_MODEL env var to override."
+            f"Anthropic call failed: {type(e).__name__}: {e}. "
+            f"Model attempted: '{ANTHROPIC_MODEL}'. "
+            f"Verified-live model IDs (Sep 2026): "
+            f"'claude-sonnet-4-5-20250929', 'claude-opus-4-1-20250805', 'claude-haiku-4-5-20251001'. "
+            f"If ANTHROPIC_MODEL secret in Streamlit Cloud is set to 'claude-sonnet-4-6' or similar, "
+            f"remove that secret line (Claude Code alias, not a public API model)."
         ) from e
     return "".join(b.text for b in r.content if b.type == "text")
 
