@@ -13,7 +13,7 @@ BACKEND = (os.getenv("LLM_BACKEND") or "auto").lower()
 ANTHROPIC_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 OPENAI_KEY = os.getenv("OPENAI_API_KEY", "")
 NVIDIA_KEY = os.getenv("NVIDIA_API_KEY", "")
-ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-6")
+ANTHROPIC_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-5-20250929")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o")
 NVIDIA_MODEL = os.getenv("NVIDIA_MODEL", "nvidia/llama-3.1-nemotron-70b-instruct")
 
@@ -47,14 +47,26 @@ def chat(system: str, user: str, temperature: float = 0.0) -> str:
 
 
 def _anthropic(system: str, user: str, temperature: float) -> str:
-    from anthropic import Anthropic
-    r = Anthropic(api_key=ANTHROPIC_KEY).messages.create(
-        model=ANTHROPIC_MODEL,
-        max_tokens=4096,
-        temperature=temperature,
-        system=system,
-        messages=[{"role": "user", "content": user}],
-    )
+    from anthropic import Anthropic, APIError
+
+    client = Anthropic(api_key=ANTHROPIC_KEY)
+    try:
+        r = client.messages.create(
+            model=ANTHROPIC_MODEL,
+            max_tokens=4096,
+            temperature=temperature,
+            system=system,
+            messages=[{"role": "user", "content": user}],
+        )
+    except APIError as e:
+        raise RuntimeError(
+            f"Anthropic API error for model '{ANTHROPIC_MODEL}': {e}. "
+            f"If the model slug is wrong, try one of the currently-live IDs: "
+            f"'claude-sonnet-4-5-20250929' (default, recommended), "
+            f"'claude-opus-4-1-20250805' (highest quality, higher cost), "
+            f"'claude-haiku-4-5-20251001' (fastest, cheapest). "
+            f"Set ANTHROPIC_MODEL env var to override."
+        ) from e
     return "".join(b.text for b in r.content if b.type == "text")
 
 
