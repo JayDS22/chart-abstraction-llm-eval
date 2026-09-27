@@ -80,12 +80,19 @@ note_text = st.text_area(
 )
 
 col_extract, col_eval = st.columns([1, 1])
-run_extract = col_extract.button("Extract structured fields", type="primary", icon=":material/biotech:", disabled=not note_text.strip())
 selected_note = st.session_state.get("selected_note")
+run_extract = col_extract.button(
+    "Extract structured fields",
+    type="primary",
+    icon=":material/biotech:",
+    disabled=not note_text.strip(),
+    use_container_width=True,
+)
 run_eval_this = col_eval.button(
-    f"Extract + score vs. gold ({selected_note})",
+    f"Extract + score vs. gold" + (f" ({selected_note})" if selected_note else ""),
     icon=":material/scoreboard:",
     disabled=not (selected_note and (GOLD_DIR / f"{selected_note}.json").exists()),
+    use_container_width=True,
 )
 
 # ---- run single extraction ----
