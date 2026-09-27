@@ -23,28 +23,28 @@ from eval.scorer import score_note, scorecard_summary  # noqa: E402
 NOTES_DIR = ROOT / "data" / "notes"
 GOLD_DIR = ROOT / "data" / "gold"
 
-st.set_page_config(page_title="Chart Abstraction LLM Eval", page_icon="🏥", layout="wide")
+st.set_page_config(page_title="Chart Abstraction LLM Eval", page_icon=":material/health_and_safety:", layout="wide")
 
 # ---- sidebar ----
 with st.sidebar:
-    st.title("🏥 Chart Abstraction")
+    st.title(":material/medical_information: Chart Abstraction")
 
     backend = llm.backend_name()
-    emoji = {"anthropic": "🟢", "openai": "🟢", "nvidia": "🟢", "mock": "🟡"}.get(backend, "🟡")
-    st.caption(f"{emoji} LLM backend: **{backend}**")
+    status_icon = ":material/check_circle:" if backend != "mock" else ":material/warning:"
+    st.caption(f"{status_icon} LLM backend: **{backend}**")
     if backend == "mock":
-        st.warning("Set `ANTHROPIC_API_KEY` (or `OPENAI_API_KEY` / `NVIDIA_API_KEY`) in `.env` or HF Space secrets for real extraction.")
+        st.warning("Set `ANTHROPIC_API_KEY` (or `OPENAI_API_KEY` / `NVIDIA_API_KEY`) in `.env` or Streamlit secrets for real extraction.")
 
     st.divider()
     st.subheader("Load an example note")
     notes = sorted(NOTES_DIR.glob("*.txt"))
     for np in notes:
-        if st.button(f"📄 {np.stem}", key=f"n_{np.stem}", use_container_width=True):
+        if st.button(np.stem, key=f"n_{np.stem}", icon=":material/description:", use_container_width=True):
             st.session_state.note_text = np.read_text()
             st.session_state.selected_note = np.stem
 
     st.divider()
-    if st.button("▶️ Run full eval (all notes)", type="primary", use_container_width=True):
+    if st.button("Run full eval (all notes)", type="primary", icon=":material/play_arrow:", use_container_width=True):
         st.session_state.run_full_eval = True
 
 
@@ -80,10 +80,11 @@ note_text = st.text_area(
 )
 
 col_extract, col_eval = st.columns([1, 1])
-run_extract = col_extract.button("🧬 Extract structured fields", type="primary", disabled=not note_text.strip())
+run_extract = col_extract.button("Extract structured fields", type="primary", icon=":material/biotech:", disabled=not note_text.strip())
 selected_note = st.session_state.get("selected_note")
 run_eval_this = col_eval.button(
-    f"📊 Extract + score vs. gold ({selected_note})",
+    f"Extract + score vs. gold ({selected_note})",
+    icon=":material/scoreboard:",
     disabled=not (selected_note and (GOLD_DIR / f"{selected_note}.json").exists()),
 )
 
@@ -106,7 +107,7 @@ if run_extract or run_eval_this:
     with tabs[4]:
         st.dataframe(pd.DataFrame([t.model_dump() for t in prediction.timeline]) if prediction.timeline else pd.DataFrame(), use_container_width=True)
 
-    with st.expander("🔍 Telemetry (raw LLM response)"):
+    with st.expander(":material/search: Telemetry (raw LLM response)"):
         st.code(telemetry.get("raw_response", "")[:4000], language="json")
 
     if run_eval_this and selected_note:
