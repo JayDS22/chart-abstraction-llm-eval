@@ -1,9 +1,28 @@
 # Chart Abstraction LLM Eval
 
-**LLM-powered structured extraction from unstructured clinical notes, with a PrismBench-shape evaluation harness.** Reads discharge summaries and extracts 5 structured fields (diagnoses, medications, procedures, lab values, timeline), scores each extraction against gold labels, tracks hallucination + latency + cost.
+## 🚀 Live Demo → **[chart-abstraction-llm-eval.streamlit.app](https://chart-abstraction-llm-eval.streamlit.app/)**
 
-**Live demo:** _(deploy to Streamlit Cloud or HF Spaces — instructions below)_
-**Source:** `github.com/JayDS22/chart-abstraction-llm-eval`
+**LLM-powered structured extraction from unstructured clinical notes, with a PrismBench-shape evaluation harness.** Reads discharge summaries and extracts 5 structured fields (diagnoses, medications, procedures, lab values, timeline), scores each extraction against gold labels, tracks hallucination + latency.
+
+Click a preloaded example (STEMI / DKA / CAP), hit **Extract + score vs. gold**, and see F1 per field + hallucination rate + raw LLM telemetry.
+
+---
+
+## In action
+
+**Landing view + extraction (Claude Sonnet 4.5 backend, 8s latency, 3 diagnoses extracted with ICD-10 codes):**
+![Landing view with extraction](docs/snapshots/01-landing.png)
+
+**Scorecard vs. gold labels — Macro F1 63%, 0% hallucination, per-field breakdown across 5 abstraction targets:**
+![Scorecard](docs/snapshots/03-scorecard.png)
+
+**Raw LLM response telemetry (visible for auditing and hallucination triage):**
+![Telemetry](docs/snapshots/04-telemetry.png)
+
+**Methodology + supported LLM backends:**
+![Methodology](docs/snapshots/02-methodology.png)
+
+---
 
 ## Why this exists
 
