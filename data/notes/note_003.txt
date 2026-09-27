@@ -1,0 +1,33 @@
+DISCHARGE SUMMARY
+Patient: [REDACTED]  MRN: 00047122  DOB: 1985-06-19
+Admission: 2026-09-10  Discharge: 2026-09-14
+Attending: Dr. J. Nguyen, MD (Pulmonology)
+
+CHIEF COMPLAINT
+Progressive shortness of breath, productive cough with yellow sputum, and fever x 4 days.
+
+HISTORY OF PRESENT ILLNESS
+41 y/o female with history of asthma presented with 4 days of worsening dyspnea, productive cough, subjective fever (max 102.1 F at home), and pleuritic chest pain. Chest X-ray on admission showed right lower lobe infiltrate. Sputum culture grew Streptococcus pneumoniae. Blood cultures negative.
+
+HOSPITAL COURSE
+Admitted for IV antibiotics and oxygen support (2L nasal cannula). Ceftriaxone 1g IV daily started 9/10. Transitioned to oral amoxicillin-clavulanate 9/12 after clinical improvement. Discharged 9/14 on room air. Asthma controller therapy continued throughout admission.
+
+DISCHARGE MEDICATIONS
+1. Amoxicillin-clavulanate 875-125 mg PO BID x 7 days (complete on 9/21)
+2. Albuterol HFA inhaler 2 puffs q4h PRN wheeze
+3. Fluticasone-salmeterol 250-50 mcg 1 puff BID (chronic)
+4. Guaifenesin 400 mg PO q6h PRN cough
+
+DISCHARGE DIAGNOSES
+1. Community-acquired pneumonia, right lower lobe (J18.1)
+2. Asthma, unspecified, uncomplicated (J45.909)
+
+DISCHARGE LABS (9/14)
+- WBC: 8.4 k/uL (down from admission 15.2)
+- CRP: 22 mg/L (down from 148)
+- SpO2: 97% on room air
+
+FOLLOW-UP
+- Primary care in 5-7 days for antibiotic completion assessment
+- Pulmonology in 4 weeks if symptoms persist
+- Chest X-ray repeat in 6 weeks

@@ -1,0 +1,36 @@
+DISCHARGE SUMMARY
+Patient: [REDACTED]  MRN: 00023891  DOB: 1972-11-02
+Admission: 2026-09-01  Discharge: 2026-09-06
+Attending: Dr. S. Kim, MD (Endocrinology)
+
+CHIEF COMPLAINT
+Polyuria, polydipsia, and 15-lb unintentional weight loss over 6 weeks.
+
+HISTORY OF PRESENT ILLNESS
+53 y/o female presenting to ED with 3-day history of fatigue, blurred vision, and abdominal pain. Fingerstick glucose in triage was 512 mg/dL. Serum ketones positive. Anion gap 22. Diagnosed with new-onset diabetic ketoacidosis, admitted to MICU.
+
+HOSPITAL COURSE
+IV insulin drip initiated per DKA protocol on admission 9/1 at 22:15. Anion gap closed by 9/2 morning. Transitioned to subcutaneous insulin regimen 9/3. Nutrition and diabetes education consultations completed 9/4-9/5. Endocrinology follow-up arranged. HbA1c on admission 12.4%. Discharged home on basal-bolus insulin.
+
+DISCHARGE MEDICATIONS
+1. Insulin glargine 24 units subcutaneous nightly
+2. Insulin lispro sliding scale before meals (per attached scale)
+3. Metformin 500 mg PO BID with meals
+4. Atorvastatin 20 mg PO nightly
+
+DISCHARGE DIAGNOSES
+1. Diabetic ketoacidosis, new onset (E10.10)
+2. Type 2 diabetes mellitus with ketoacidosis without coma (E11.10)
+3. Hyperlipidemia (E78.5)
+
+DISCHARGE LABS (9/6)
+- Glucose (fasting): 142 mg/dL
+- HbA1c: 12.4% (admission)
+- Anion gap: 8 (normal)
+- Bicarbonate: 24 mEq/L
+- Creatinine: 0.9 mg/dL
+
+FOLLOW-UP
+- Endocrinology clinic in 1 week
+- Diabetes educator within 3 days
+- Primary care within 2 weeks

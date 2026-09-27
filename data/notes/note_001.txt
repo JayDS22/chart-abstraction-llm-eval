@@ -1,0 +1,36 @@
+DISCHARGE SUMMARY
+Patient: [REDACTED]  MRN: 00012345  DOB: 1958-03-14
+Admission: 2026-08-14  Discharge: 2026-08-22
+Attending: Dr. R. Patel, MD (Cardiology)
+
+CHIEF COMPLAINT
+Substernal chest pain radiating to left arm, onset 3 hours prior to arrival.
+
+HISTORY OF PRESENT ILLNESS
+68 y/o male with hx of hypertension and hyperlipidemia presented to ED on 8/14 with acute-onset substernal chest pressure, diaphoresis, and dyspnea on exertion. Initial ECG showed 2mm ST-elevation in V2-V4 consistent with anterior STEMI. Troponin I peaked at 24.3 ng/mL on admission.
+
+HOSPITAL COURSE
+Patient was taken emergently to cath lab. LHC revealed 95% proximal LAD stenosis. Successful PCI with drug-eluting stent placement performed 8/14 at 16:42. Post-procedure LVEF measured at 42% on echocardiogram 8/16. Patient was continued on dual antiplatelet therapy and started on high-intensity statin. Uneventful recovery. Cardiac rehab consult placed prior to discharge.
+
+DISCHARGE MEDICATIONS
+1. Aspirin 81 mg PO daily
+2. Ticagrelor 90 mg PO BID
+3. Atorvastatin 80 mg PO nightly
+4. Metoprolol succinate 50 mg PO daily
+5. Lisinopril 10 mg PO daily
+
+DISCHARGE DIAGNOSES
+1. ST-elevation myocardial infarction, anterior wall (I21.09)
+2. Essential hypertension (I10)
+3. Hyperlipidemia, unspecified (E78.5)
+
+DISCHARGE LABS (8/22)
+- Troponin I: 0.08 ng/mL (down from peak 24.3)
+- Creatinine: 1.1 mg/dL
+- LDL: 68 mg/dL
+- HbA1c: 5.8%
+
+FOLLOW-UP
+- Cardiology clinic in 2 weeks
+- Cardiac rehabilitation start date 9/5/2026
+- PCP within 7 days

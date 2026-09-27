@@ -1,0 +1,30 @@
+{
+  "note_id": "note_003",
+  "diagnoses": [
+    {"description": "Community-acquired pneumonia, right lower lobe", "icd10": "J18.1"},
+    {"description": "Asthma, unspecified, uncomplicated", "icd10": "J45.909"}
+  ],
+  "medications": [
+    {"name": "Amoxicillin-clavulanate", "dose": "875-125 mg", "route": "PO", "frequency": "BID x 7 days"},
+    {"name": "Albuterol HFA inhaler", "dose": "2 puffs", "route": "inhalation", "frequency": "q4h PRN wheeze"},
+    {"name": "Fluticasone-salmeterol", "dose": "250-50 mcg", "route": "inhalation", "frequency": "1 puff BID"},
+    {"name": "Guaifenesin", "dose": "400 mg", "route": "PO", "frequency": "q6h PRN cough"}
+  ],
+  "procedures": [
+    {"name": "Chest X-ray", "date": "2026-09-10"},
+    {"name": "Sputum culture", "date": "2026-09-10"},
+    {"name": "Blood cultures", "date": "2026-09-10"}
+  ],
+  "lab_values": [
+    {"test": "WBC (admission)", "value": "15.2", "unit": "k/uL", "date": "2026-09-10"},
+    {"test": "WBC (discharge)", "value": "8.4", "unit": "k/uL", "date": "2026-09-14"},
+    {"test": "CRP (admission)", "value": "148", "unit": "mg/L", "date": "2026-09-10"},
+    {"test": "CRP (discharge)", "value": "22", "unit": "mg/L", "date": "2026-09-14"},
+    {"test": "SpO2 (discharge)", "value": "97", "unit": "% on room air", "date": "2026-09-14"}
+  ],
+  "timeline": [
+    {"date": "2026-09-10", "event": "Admission with CAP, ceftriaxone IV started, 2L O2"},
+    {"date": "2026-09-12", "event": "Transition to oral amoxicillin-clavulanate"},
+    {"date": "2026-09-14", "event": "Discharge on room air"}
+  ]
+}

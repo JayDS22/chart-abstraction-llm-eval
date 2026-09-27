@@ -1,0 +1,33 @@
+{
+  "note_id": "note_002",
+  "diagnoses": [
+    {"description": "Diabetic ketoacidosis, new onset", "icd10": "E10.10"},
+    {"description": "Type 2 diabetes mellitus with ketoacidosis without coma", "icd10": "E11.10"},
+    {"description": "Hyperlipidemia", "icd10": "E78.5"}
+  ],
+  "medications": [
+    {"name": "Insulin glargine", "dose": "24 units", "route": "subcutaneous", "frequency": "nightly"},
+    {"name": "Insulin lispro", "dose": "sliding scale", "route": "subcutaneous", "frequency": "before meals"},
+    {"name": "Metformin", "dose": "500 mg", "route": "PO", "frequency": "BID with meals"},
+    {"name": "Atorvastatin", "dose": "20 mg", "route": "PO", "frequency": "nightly"}
+  ],
+  "procedures": [
+    {"name": "IV insulin drip per DKA protocol", "date": "2026-09-01"},
+    {"name": "Diabetes education consultation", "date": "2026-09-04"}
+  ],
+  "lab_values": [
+    {"test": "Glucose (triage)", "value": "512", "unit": "mg/dL", "date": "2026-09-01"},
+    {"test": "Glucose (fasting, discharge)", "value": "142", "unit": "mg/dL", "date": "2026-09-06"},
+    {"test": "HbA1c", "value": "12.4", "unit": "%", "date": "2026-09-01"},
+    {"test": "Anion gap (admission)", "value": "22", "unit": "", "date": "2026-09-01"},
+    {"test": "Anion gap (discharge)", "value": "8", "unit": "", "date": "2026-09-06"},
+    {"test": "Bicarbonate", "value": "24", "unit": "mEq/L", "date": "2026-09-06"},
+    {"test": "Creatinine", "value": "0.9", "unit": "mg/dL", "date": "2026-09-06"}
+  ],
+  "timeline": [
+    {"date": "2026-09-01", "event": "Admission with DKA, IV insulin drip initiated"},
+    {"date": "2026-09-02", "event": "Anion gap closed"},
+    {"date": "2026-09-03", "event": "Transition to subcutaneous insulin regimen"},
+    {"date": "2026-09-06", "event": "Discharge"}
+  ]
+}
